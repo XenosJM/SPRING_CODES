@@ -1,0 +1,9 @@
+package com.mokcoding.ex02.config;
+
+import org.springframework.context.annotation.Configuration;
+
+// root-context.xml과 동일
+@Configuration 
+public class RootConfig {
+
+}
