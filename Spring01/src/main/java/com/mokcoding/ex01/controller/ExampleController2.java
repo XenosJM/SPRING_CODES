@@ -21,9 +21,7 @@ public class ExampleController2 {
 	
 	// 데이터 수신 역할(POST)
 	@PostMapping("/send")
-	public String sendPOST(
-			@RequestParam("name") String name,
-			@RequestParam("age") int age) {
+	public String sendPOST(@RequestParam("name") String name, @RequestParam("age") int age) {
 		// String name = request.getParameter("name");
 		// int age = Integer.parseInt(request.getParameter("age"));
 		
@@ -31,6 +29,7 @@ public class ExampleController2 {
 		log.info("name = " + name + ", age = " + age);
 		return "redirect:/"; // response.sendRedirect();
 	}
+	
 //	@PostMapping("/send")
 	public String sendPOSTv2(
 			// parameter와 변수의 이름이 같다면 parameter의 value 생략 가능
