@@ -18,7 +18,7 @@ public class ExampleController1 {
 	// @RequestMapping : 특정 메소드를 요청에 대한 처리가 가능하도록 만드는 어노테이션
 	// URL, HTTP Method 등의 속성을 갖고 있음.
 	@RequestMapping(value="/page1", method=RequestMethod.GET)
-	// @GetMapping("/page1") -> 여기서 더 줄어들수도 있음 ㄷㄷ
+	// @GetMapping("/page1") -> 여기서 더 줄어들수도 있음
 	public String page1() {
 		logger.info("page1()");
 		return "example1/page1"; // jsp 경로 및 파일 이름(view name)
