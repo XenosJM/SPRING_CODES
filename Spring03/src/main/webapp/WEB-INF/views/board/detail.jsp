@@ -134,13 +134,13 @@
          // 삭제 버튼을 클릭하면 선택된 댓글 삭제
          $('#replies').on('click', '.reply_item .btn_delete', function(){
             console.log(this);
-            
-            var replyId = $(this).prevAll('#replyId').val();
+            let boardId = $('#boardId').val(); // 게시판 번호 데이터
+            let replyId = $(this).prevAll('#replyId').val();
             
             // ajax 요청
             $.ajax({
                type : 'DELETE', 
-               url : '../reply/' + replyId, 
+               url : '../reply/' + replyId + '/' + boardId, 
                headers : {
                   'Content-Type' : 'application/json'
                },
